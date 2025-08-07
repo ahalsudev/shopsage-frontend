@@ -1,15 +1,14 @@
 import { Button } from "@/components/ui/button"
 import {
   ShoppingCart,
-  Menu,
   Download,
-  MessageCircle,
-  Shield,
+  WalletMinimal,
+  CreditCard,
   Search,
-  Users,
-  Calendar,
-  CheckCircle,
-  Smartphone,
+  Video,
+  Shield,
+  Gauge,
+  BanknoteArrowDown,
 } from "lucide-react"
 import Link from "next/link"
 
@@ -21,55 +20,27 @@ export default function Home() {
         <div className="container mx-auto flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
-              <ShoppingCart className="h-5 w-5 text-white" />
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+            <img
+              src="/shopsageLogo.png"
+              alt="ShopSage Logo"
+              className="w-8 h-8 object-contain"
+            />
+            <span className="text-xl font-bold bg-gradient-to-r from-green-400 to-purple-600 bg-clip-text text-transparent">
               ShopSage
             </span>
           </Link>
 
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link
-              href="#features"
-              className="text-sm font-medium text-gray-700 hover:text-purple-600 transition-colors"
-            >
-              Features
-            </Link>
-            <Link
-              href="#how-it-works"
-              className="text-sm font-medium text-gray-700 hover:text-purple-600 transition-colors"
-            >
-              How it Works
-            </Link>
-            <Link
-              href="#blockchain"
-              className="text-sm font-medium text-gray-700 hover:text-purple-600 transition-colors"
-            >
-              Blockchain
-            </Link>
-            <Link href="#contact" className="text-sm font-medium text-gray-700 hover:text-purple-600 transition-colors">
-              Contact
-            </Link>
-          </nav>
-
           {/* CTA Button */}
           <div className="flex items-center space-x-4">
             <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6">
-              <Download className="w-4 h-4 mr-2" />
-              <span className="hidden sm:inline">Download App</span>
-              <span className="sm:hidden">Download</span>
-            </Button>
-            <Button variant="ghost" size="sm" className="md:hidden">
-              <Menu className="h-5 w-5" />
+              <a href="https://github.com/ahalsudev/shopsage-mobile">GitHub</a>
             </Button>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <main className="container mx-auto px-4 lg:px-6">
+      <main className="container mx-auto px-14 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-4rem)] py-8">
           {/* Left Column - Content */}
           <div className="flex flex-col justify-center space-y-6 lg:space-y-8">
@@ -82,39 +53,47 @@ export default function Home() {
             {/* Headline */}
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                Smart Shopping
+                Stop Shopping Alone.
                 <span className="block bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                  Consultation
+                  Get Expert Advice.
                 </span>
-                <span className="block text-gray-900">Made Simple</span>
               </h1>
 
-              <p className="text-lg lg:text-xl text-gray-600 max-w-lg leading-relaxed">
-                Get personalized shopping advice powered by AI and secured by Solana blockchain. Make smarter purchases
-                with expert consultation at your fingertips.
+              <p className="text-md lg:text-lg text-gray-600 max-w-lg leading-relaxed">
+                {"Connect with shopping experts in real-time through a 5-minute video call. Make confident purchases and eliminate buyer's remorse forever."}
               </p>
             </div>
 
             {/* Features List */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
-                  <MessageCircle className="w-4 h-4 text-purple-600" />
+            <div >
+              <div className="text-xl font-medium text-purple-700 py-4">How it works</div>
+              <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <WalletMinimal className="w-4 h-4 text-purple-600" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700">Connect Your Wallet</span>
                 </div>
-                <span className="text-sm font-medium text-gray-700">AI Consultation</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <Shield className="w-4 h-4 text-blue-600" />
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                    <Search className="w-4 h-4 text-blue-600" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700">Find Your Expert</span>
                 </div>
-                <span className="text-sm font-medium text-gray-700">Blockchain Secure</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
-                  <Search className="w-4 h-4 text-green-600" />
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                    <CreditCard className="w-4 h-4 text-green-600" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700">Book & Pay</span>
                 </div>
-                <span className="text-sm font-medium text-gray-700">Smart Search</span>
+                <div className="flex items-center space-x-2">
+                  <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
+                    <Video className="w-4 h-4 text-purple-600" />
+                  </div>
+                  <span className="text-sm font-medium text-gray-700">Get Expert Advice</span>
+                </div>
               </div>
+
             </div>
 
             {/* CTA Buttons */}
@@ -125,44 +104,33 @@ export default function Home() {
               >
                 <div className="flex items-center mr-2">
                   <Download className="w-5 h-5 mr-1" />
-                  <div className="w-4 h-4 bg-green-500 rounded-sm flex items-center justify-center">
-                    <span className="text-xs font-bold text-white">A</span>
-                  </div>
                 </div>
-                Download for Android
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-purple-200 text-purple-700 hover:bg-purple-50 px-8 py-3 text-lg bg-transparent"
-              >
-                <Smartphone className="w-5 h-5 mr-2" />
-                View Demo
+                <a href="https://github.com/ahalsudev/shopsage-mobile">Download for Android</a>
               </Button>
             </div>
 
             {/* Stats */}
             <div className="flex items-center space-x-8 pt-6 border-t border-gray-100">
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 flex items-center justify-center">
-                  <Calendar className="w-5 h-5 mr-1 text-purple-600" />
-                  Q2
+                <div className="text-lg font-bold text-gray-900 flex items-center justify-center">
+                  <Gauge className="w-5 h-5 mr-1 text-purple-600" />
+                  Lightning Fast
                 </div>
-                <div className="text-sm text-gray-600">Launch Date</div>
+                <div className="text-sm text-gray-600">Built on Solana</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 flex items-center justify-center">
-                  <Users className="w-5 h-5 mr-1 text-blue-600" />
-                  500+
+                <div className="text-lg font-bold text-gray-900 flex items-center justify-center">
+                  <Shield className="w-5 h-5 mr-1 text-blue-600" />
+                  Ultra Secure
                 </div>
-                <div className="text-sm text-gray-600">Beta Signups</div>
+                <div className="text-sm text-gray-600">Non-custodial</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 flex items-center justify-center">
-                  <CheckCircle className="w-5 h-5 mr-1 text-green-600" />
-                  90%
+                <div className="text-lg font-bold text-gray-900 flex items-center justify-center">
+                  <BanknoteArrowDown className="w-5 h-5 mr-1 text-green-600" />
+                  Low Cost
                 </div>
-                <div className="text-sm text-gray-600">Development</div>
+                <div className="text-sm text-gray-600">Minimal fees</div>
               </div>
             </div>
           </div>
@@ -260,7 +228,7 @@ export default function Home() {
                 <div className="text-white font-bold text-lg">S</div>
               </div>
               <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center shadow-lg">
-                <MessageCircle className="w-6 h-6 text-white" />
+                <WalletMinimal className="w-6 h-6 text-white" />
               </div>
             </div>
           </div>
