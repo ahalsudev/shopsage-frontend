@@ -33,7 +33,7 @@ export default function Home() {
           {/* CTA Button */}
           <div className="flex items-center space-x-4">
             <Button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6">
-              <a href="https://github.com/ahalsudev/shopsage-mobile">GitHub</a>
+              <a href="https://github.com/ahalsudev/shopsage">GitHub</a>
             </Button>
           </div>
         </div>
@@ -105,7 +105,7 @@ export default function Home() {
                 <div className="flex items-center mr-2">
                   <Download className="w-5 h-5 mr-1" />
                 </div>
-                <a href="https://github.com/ahalsudev/shopsage-mobile">Download for Android</a>
+                <a href="https://github.com/ahalsudev/shopsage">Download for Android</a>
               </Button>
             </div>
 
